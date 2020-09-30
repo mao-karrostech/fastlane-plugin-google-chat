@@ -54,6 +54,7 @@
           http.use_ssl = true
           http.verify_mode = OpenSSL::SSL::VERIFY_PEER
           request = Net::HTTP::Post.new(uri.request_uri)
+          request.content_type = "application/json"
           request.body = cards.to_json
           
           # Send the request
