@@ -60,7 +60,7 @@
           # Send the request
           response = http.request(request)
 
-          UI.message("Message sent! #{response}")
+          UI.message("Message sent! #{response.code}")
         end
         
         def self.description
